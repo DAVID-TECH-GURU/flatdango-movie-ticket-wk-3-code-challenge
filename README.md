@@ -1,4 +1,4 @@
-Flatdango
+# Flatdango
 
 Flatdango is a web application that allows users to purchase movie tickets from the Flatiron Movie Theater. This project is part of the week 3 code challenge for implementing a 'mini' web application using JavaScript.
 
