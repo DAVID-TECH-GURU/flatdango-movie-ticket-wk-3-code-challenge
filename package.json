@@ -1,0 +1,11 @@
+{
+  "name": "flatdango-movie-ticket",
+  "version": "1.0.0",
+  "description": "Flatdango",
+  "main": "app.js",
+  "scripts": {
+    "json:server": "json-server --watch db.json --port 3001"
+  },
+  "author": "",
+  "license": "ISC"
+}
