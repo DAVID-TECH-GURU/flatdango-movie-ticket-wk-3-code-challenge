@@ -1,5 +1,5 @@
-const filmsUrl = 'http://localhost:3000/films'
-const filmUrl = 'http://localhost:3000/films/1'
+const filmsUrl = 'http://localhost:3001/films'
+const filmUrl = 'http://localhost:3001/films/1'
 
 const posterEl = document.querySelector('#poster')
 const titleEl = document.querySelector('#title')
@@ -119,7 +119,7 @@ function renderMovies(movies) {
   filmItems.forEach((filmItem) => {
     filmItem.addEventListener('click', async (event) => {
       const id = event.target.dataset.id;
-      const response = await fetch(`http://localhost:3000/films/${id}`);
+      const response = await fetch(`http://localhost:3001/films/${id}`);
       const film = await response.json();
       const movieDetails = document.querySelector('#movie-details');
       movieDetails.innerHTML = `
@@ -146,7 +146,7 @@ function renderMovies(movies) {
         ...film,
         tickets_sold: film.tickets_sold + 1,
       };
-      await fetch(`http://localhost:3000/films/${id}`, {
+      await fetch(`http://localhost:3001/films/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -169,7 +169,7 @@ function renderMovies(movies) {
       const deleteButton = document.createElement('button');
       deleteButton.innerText = 'Delete';
       deleteButton.addEventListener('click', async () => {
-        await fetch(`http://localhost:3000/films/${film.id}`, {
+        await fetch(`http://localhost:3001/films/${film.id}`, {
           method: 'DELETE',
         });
         filmItem.remove();
