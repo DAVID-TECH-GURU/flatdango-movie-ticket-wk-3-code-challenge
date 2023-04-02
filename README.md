@@ -29,7 +29,7 @@ Open the application in your browser:
 
 arduino
 Copy code
-http://localhost:3001
+http://localhost:3000
 
 Technologies Used
 JavaScript
